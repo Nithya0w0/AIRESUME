@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Resume Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<div class="navbar">
+    <div class="navbar">
+    <h1>AIRESUME</h1>
+</div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+
+    <!-- LEFT -->
+    <div class="left">
+
+        <h1>Get expert feedback on your resume, instantly</h1>
+
+        <p class="desc">
+            AI-powered resume ranking system that analyzes and scores your resume 
+            based on job descriptions.
+        </p>
+
+        <div class="job-inputs">
+
+    <input 
+        type="text" 
+        id="jobTitle" 
+        placeholder="Enter Job Title (e.g. Python Developer)"
+        class="job-title"
+    >
+
+    <textarea 
+        id="jobDesc" 
+        placeholder="Enter Job Description..."
+    ></textarea>
+
+</div>
+
+        <!-- DRAG DROP -->
+        <div class="upload-box" onclick="document.getElementById('resumeFiles').click()">
+            <p>📂 Drop your resume or click to upload</p>
+            <input type="file" id="resumeFiles" multiple hidden>
+        </div>
+
+        <button onclick="uploadData()">Analyze Resume</button>
+
+        <div id="results"></div>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right">
+
+        <div class="score-card">
+            <svg class="progress-ring" width="150" height="150">
+                <circle class="bg" cx="75" cy="75" r="65"/>
+                <circle class="progress" cx="75" cy="75" r="65"/>
+            </svg>
+
+            <div class="score-text" id="mainScore">0</div>
+            <p>Resume Score</p>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
